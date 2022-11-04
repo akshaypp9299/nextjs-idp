@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0rem;
 }
 
 .main {
@@ -126,4 +126,22 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.mo-color{
+  color: #68cfb0;
+}
+.mo-hover:hover{
+  color: #68cfb0!important;
+}
+.mo-bg{
+  background-color: #68cfb0;
+}
+
+.mo-border{
+  border-color: #68cfb0;
+}
+
+.z-index{
+  z-index: 999;
 }

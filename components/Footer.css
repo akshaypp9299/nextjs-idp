@@ -1,0 +1,13 @@
+.footer-bg{
+    background-color: #263746;
+}
+.footer-link__color{
+    color:#adadad!important;
+}
+.footer-link__color:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.footer-copyright{
+    background-color: #263746;
+}
