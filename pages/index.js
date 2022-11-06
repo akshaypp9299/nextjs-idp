@@ -47,8 +47,8 @@ export default function Home() {
     }
   ]
 
-  const faqs = faqData.map(function (faq) {
-    return <Faq title={faq.title} desc={faq.desc} />
+  const faqs = faqData.map(function (faq,index) {
+    return <Faq key={index} title={faq.title} desc={faq.desc} />
   })
 
 

@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Pricing() {
 
     const pricingFeatures = [
-        {
+        {   
             title: "User Storage Location",
             featureOne: "Password will be stored in your WordPress Database",
             featureTwo: "Password can be manage by miniOrange or by the 3rd party Identity Provider"
@@ -53,9 +53,10 @@ function Pricing() {
 
     ]
 
-    const data = pricingFeatures.map(function (feature) {
+    const data = pricingFeatures.map(function (feature,index) {
         return (
-            <tr>
+            <tr key={index}>
+                
                 <td className="background-color">
                     {feature.title}
                 </td>
@@ -99,7 +100,7 @@ function Pricing() {
 
         if (userValue == 1) {
             setUserFirstPrice("$500");
-            setUserSecondPrice("250");
+            setUserSecondPrice("$250");
         }
         else if (userValue == 2) {
             setUserFirstPrice("$600");
@@ -142,7 +143,16 @@ function Pricing() {
         }
     }
 
-    console.log(userValue);
+    const [isHover, setIsHover] = useState(false);
+
+    function onHoverHandler() {
+        setIsHover(true);
+    }
+
+    function onLeavehandler() {
+        setIsHover(false);
+    }
+
 
     return (
         <>
@@ -153,114 +163,123 @@ function Pricing() {
                     </div>
                 </div>
             </div>
-            <Table className="pricing-table" style={{ width: "82%" }}>
-                <thead>
-                    <tr>
-                        <td className="background-color rcorners text-center" style={{ width: "15%", verticalAlign: "middle", letterSpacing: "1.6px" }}>
-                            <b>Licensing Plan Name</b>
-                        </td>
-                        <td className="rcorners heading-background-color text-white text-center" style={{ width: "42%" }}>
-                            <b>PREMIUM PLAN</b>
-                            <br />
-                            <br />
-                            <p>(Users stored in your own WordPress database)</p>
-                        </td>
-                        <td className="rcorners heading-background-color text-white text-center">
-                            <b>ALL-INCLUSIVE PLAN</b>
-                            <br />
-                            <br />
-                            <p>(Users hosted in miniOrange or Enterprise Directory like Azure AD, Active Directory, LDAP, Office365, Google Apps or any 3rd party providers using SAML, OAuth, Database, APIs etc)
-                            </p>
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="background-color">User Slab / Pricing</td>
-                        <td className="pricing-sub-desc text-center">Yearly Pricing
-                            <br />
-                            <p style={{ color: "red" }}>(<span className="saml-idp-pricing-slab">50%</span> from 2<sup>nd</sup> year onwards)</p>
-                        </td>
-                        <td className="pricing-sub-desc text-center">
-                            Monthly / Yearly Pricing
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="background-color" rowSpan={2}>
-                            Pricing
-                        </td>
-                        <td>
-                            <table className="idp-inner-table">
-                                <tbody>
-                                    <tr>
-                                        <td className="wp-idp-pricing-label">
-                                            Select SSO Users:
-                                        </td>
-                                        <td>
-                                            <select className="idp-pricing-users" name="serviceNotes" onChange={UserHandler}>
-                                                <option value="1">1-100 Users</option>
-                                                <option value="2">101-200 Users</option>
-                                                <option value="3">201-300 Users</option>
-                                                <option value="4">301-400 Users</option>
-                                                <option value="5">401-500 Users</option>
-                                                <option value="6">501-1000 Users</option>
-                                                <option value="7">1001-2000 Users</option>
-                                                <option value="8">2001-3000 Users</option>
-                                                <option value="9">3001-4000 Users</option>
-                                                <option value="10">4001-5000 Users</option>
-                                                <option value="11">5000+ Users</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    {isActive ? <> <tr>
-                                        <td className="wp-idp-pricing-label">
-                                            1<sup>st</sup> Year Price
-                                        </td>
-                                        <td>
-                                            {userFirstPrice}
-                                        </td>
-                                    </tr>
-                                        <tr>
+            <div id="pricing">
+                <Table className="pricing-table" style={{ width: "82%" }}>
+                    <thead>
+                        <tr>
+                            <td className="background-color rcorners text-center" style={{ width: "15%", verticalAlign: "middle", letterSpacing: "1.6px" }}>
+                                <b>Licensing Plan Name</b>
+                            </td>
+                            <td className="rcorners heading-background-color text-white text-center" style={{ width: "42%" }}>
+                                <b>PREMIUM PLAN</b>
+                                <br />
+                                <br />
+                                <p>(Users stored in your own WordPress database)</p>
+                            </td>
+                            <td className="rcorners heading-background-color text-white text-center">
+                                <b>ALL-INCLUSIVE PLAN</b>
+                                <br />
+                                <br />
+                                <p>(Users hosted in miniOrange or Enterprise Directory like Azure AD, Active Directory, LDAP, Office365, Google Apps or any 3rd party providers using SAML, OAuth, Database, APIs etc)
+                                </p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="background-color">User Slab / Pricing</td>
+                            <td className="pricing-sub-desc text-center">Yearly Pricing
+                                <br />
+                                <p style={{ color: "red" }}>(<span className="saml-idp-pricing-slab">50%</span> from 2<sup>nd</sup> year onwards)</p>
+                            </td>
+                            <td className="pricing-sub-desc text-center">
+                                Monthly / Yearly Pricing
+                            </td>
+                        </tr>
+                        <tr className="pr-row">
+                            <td className="background-color" rowSpan={2}>
+                                Pricing
+                            </td>
+                            <td className="wp-idp-pricing-dropdown">
+                                <table className="idp-inner-table" style={{ borderCollapse: "revert" }}>
+                                    <tbody>
+                                        <tr >
                                             <td className="wp-idp-pricing-label">
-                                                2<sup>nd</sup> Year Price
+                                                Select SSO Users:
                                             </td>
                                             <td>
-                                                {userSecondPrice}
+                                                <select className="idp-pricing-users" name="serviceNotes" onChange={UserHandler}>
+                                                    <option value="1">1-100 Users</option>
+                                                    <option value="2">101-200 Users</option>
+                                                    <option value="3">201-300 Users</option>
+                                                    <option value="4">301-400 Users</option>
+                                                    <option value="5">401-500 Users</option>
+                                                    <option value="6">501-1000 Users</option>
+                                                    <option value="7">1001-2000 Users</option>
+                                                    <option value="8">2001-3000 Users</option>
+                                                    <option value="9">3001-4000 Users</option>
+                                                    <option value="10">4001-5000 Users</option>
+                                                    <option value="11">5000+ Users</option>
+                                                </select>
                                             </td>
-                                        </tr> </>
-                                        :
-                                        <>
+                                        </tr>
+                                        {isActive ? <> <tr>
+                                            <td className="wp-idp-pricing-label idp-table-border">
+                                                1<sup>st</sup> Year Price
+                                            </td>
+                                            <td className="wp-idp-price text-center idp-table-border">
+                                                {userFirstPrice}
+                                            </td>
+                                        </tr>
                                             <tr>
-                                                <div className="text-center">
-                                                    <a href="www.google.com" className="text-center">Request a Quote</a>
-                                                </div>
+                                                <td className="wp-idp-pricing-label">
+                                                    2<sup>nd</sup> Year Price
+                                                </td>
+                                                <td className="wp-idp-price text-center">
+                                                    {userSecondPrice}
+                                                </td>
+                                            </tr> </>
+                                            :
+                                            <tr>
+                                                <td colSpan={2}>
+                                                    <div className="text-center">
+                                                        <a href="https://www.miniorange.com/contact" target="_blank" style={{ color: "#FE7E00", textDecoration: "underline !important", fontWeight: "500", fontSize: "1.1rem" }} className="text-center">Request a Quote</a>
+                                                    </div>
+                                                </td>
                                             </tr>
-                                        </>
-                                    }
-                                </tbody>
-                            </table>
-                        </td>
-                        <td className="text-center">
-                            <b>Starts from $2/user/month</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-link="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&amp;requestOrigin=wp_saml_idp_premium_plan" style={{ verticalAlign: "middle" }} id="rcorners2" class="btn  pricing-btn btn-secondary">UPGRADE NOW</td>
-                        <td data-link="https://www.miniorange.com/contact" style={{ verticalAlign: "middle" }} id="rcorners2" class="pricing-btn btn">REQUEST A QUOTE</td>
-                    </tr>
-                    <tr>
-                        <td className="background-color">Multiple Service Providers</td>
-                        <td className="data-background-color text-center">$50 per additional SP <FontAwesomeIcon icon={faCircleInfo} /> </td>
-                        <td className="data-background-color text-center">No additional charges for SP</td>
-                    </tr>
-                    {data}
-                    <tr className="lst-row">
-                        <td className="background-color">User Provisioning</td>
-                        <td className="data-background-color text-center">Not Included</td>
-                        <td className="data-background-color text-center">Included</td>
-                    </tr>
-                </tbody>
-            </Table>
+                                        }
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="text-center">
+                                <b>Starts from $2/user/month</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style={{ verticalAlign: "middle" }} id="rcorners2" className="btn  pricing-btn btn-secondary"><a style={{ color: "#fff" }} href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&amp;requestOrigin=wp_saml_idp_premium_plan" target="_blank" rel="noopener noreferrer">UPGRADE NOW</a></td>
+                            <td style={{ verticalAlign: "middle" }} id="rcorners2" className="pricing-btn btn">
+                                <a style={{ color: "#fff" }} href="https://www.miniorange.com/contact" target="_blank">REQUEST A QUOTE</a></td>
+                        </tr>
+                        <tr>
+                            <td className="background-color">Multiple Service Providers</td>
+                            <td className="data-background-color text-center">$50 per additional SP <FontAwesomeIcon icon={faCircleInfo} onMouseOver={onHoverHandler} onMouseLeave={onLeavehandler} />
+                                {isHover &&
+                                    <div className="tooltip-text">
+                                        If you want more than one Service Providers then you will be charged $50 additional per SP
+                                    </div>
+                                }
+                            </td>
+                            <td className="data-background-color text-center">No additional charges for SP</td>
+                        </tr>
+                        {data}
+                        <tr className="lst-row">
+                            <td className="background-color">User Provisioning</td>
+                            <td className="data-background-color text-center">Not Included</td>
+                            <td className="data-background-color text-center">Included</td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
         </>
     )
 }

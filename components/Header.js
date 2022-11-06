@@ -23,7 +23,7 @@ const Header = () => {
 		<>
             <div className='nav justify-content-between align-items-center p-2 shadow-sm position-sticky top-0 bg-white z-index' id="header">
                 <div className='ms-3'>
-                    <img src='/Assets/miniOrange.png' width={250} height={50} className='mt-2' />
+                    <img src='/Assets/miniOrange.png' width={250} height={50} className='mt-2' alt="miniOrangeLogo" />
                 </div>
                 <div className='nav'>
                     <Link legacyBehavior href='/'><a className='nav-link text-dark mo-hover' onMouseEnter={hideMenu}>Home</a></Link>

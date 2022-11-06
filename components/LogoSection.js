@@ -1,7 +1,11 @@
 import Image from "next/image";
 
 const LogoSection = () => {
-  return (
+    const openTabWindow = (url) =>{
+        window.open(url,'_blank');
+      }
+  
+    return (
     <div className="main">  
     <div className="logo-section1">
         <div className="logo-container1 d-flex justify-content-center align-items-center">
@@ -52,7 +56,7 @@ const LogoSection = () => {
             <p className="text-center desc-idp">You can enable Single Sign-On (SSO Login) in your SAML / JWT / WS-FED Application using Wordpress as an
                 Identity Provider. See our integration guides with the most popular Service Providers.</p>
         </div>
-        <button className="button-63" style={{fontSize:15}} role="button" onclick="window.open('https://plugins.miniorange.com/step-by-step-guide-for-wordpress-saml-idp')">See all Service Providers</button>
+        <button className="button-63" style={{fontSize:15}} role="button" onClick={()=>openTabWindow('https://plugins.miniorange.com/step-by-step-guide-for-wordpress-saml-idp')}>See all Service Providers</button>
         <p className="text-center"><b>Can't find your SP ?</b> Contact us on <a className="anchor" href="mailto:samlsupport@xecurify.com"><span style={{fontWeight:600}}><u>samlsupport@xecurify.com</u></span></a><br/> We'll
             help you set up your SSO in no time.</p>
     </div>

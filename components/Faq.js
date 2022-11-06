@@ -15,7 +15,7 @@ function Faq(props) {
         <div className="faq-item " onClick={handleIcon}>
           <div className="faq-title">
             <div>{props.title}</div>
-            <div className="faqIcon">{faqIcon ? "x" : <><Image src="/Assets/chevron.png" width={12} height={12} /></>}</div>
+            <div className="faqIcon">{faqIcon ? "x" : <><Image src="/Assets/chevron.png" width={12} height={12} alt="chevron" /></>}</div>
           </div>
           {faqIcon && <div className="faq-desc">{props.desc}</div>}
         </div>

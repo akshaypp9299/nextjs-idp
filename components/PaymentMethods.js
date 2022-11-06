@@ -7,7 +7,7 @@ export default function PaymentMethods() {
         <div className='container'>
             <h2 className="plan-head-saml saml-scroll mt-5 mb-3" id="payment-methods">Payment Methods </h2>
             <div className="row text-center">
-                <div className="col-md-4 mt-3">
+                <div className="col-lg-4 col-md-6 col-sm-12 col-md-4 mt-3">
                     <div className="plan-box">
                         <div className="plan-box-up">
                             <FontAwesomeIcon icon={faCcAmex} size="3x" style={{padding:"2px"}}/>
@@ -19,21 +19,20 @@ export default function PaymentMethods() {
                         </p>
                     </div>
                 </div>
-                <div className="col-md-4 mt-3">
+                <div className="col-lg-4 col-md-6 col-sm-12 col-md-4 mt-3">
                     <div className="plan-box">
                         <div className="plan-box-up">
-                            <img src="https://plugins.miniorange.com/wp-content/uploads/2022/08/paypal.webp" width="56px" height="56px" />
-                            {/* <FontAwesomeIcon icon={faPaypal} size="3x"/> */}
+                            <img src="https://plugins.miniorange.com/wp-content/uploads/2022/08/paypal.webp" width="56px" height="56px" alt="paypal" />
                         </div>
                         <p>
                             Please contact us <a className='anchor' href="https://www.miniorange.com/contact" target="_blank"><b>here</b></a> or drop an email at <a className='anchor' href="mailto:samlsupport@xecurify.com"><b>samlsupport@xecurify.com</b></a> for more information<br /><br />
                         </p>
                     </div>
                 </div>
-                <div className="col-md-4 mt-3">
+                <div className="col-lg-4 col-md-6 col-sm-12 col-md-4 mt-3">
                     <div className="plan-box">
                         <div className="plan-box-up d-flex justify-content-center align-items-baseline">
-                            <Image src="/Assets/Payment-methods.png" width={42} height={42}/>
+                            <Image src="/Assets/Payment-methods.png" width={42} height={42} alt="bank transfer"/>
                             <span className="h3" style={{fontFamily:"Auto"}}>&nbsp;&nbsp;Bank Transfer</span>
                         </div>
                         <p>

@@ -29,17 +29,15 @@ export default function TrialForm() {
         })
    }
 
-   console.log(data);
    
    const sendData = async(event) =>{
     event.preventDefault();
     await dataHandler(data);
-    console.log("data sent");
    }
    
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid" id="request-free-trial">
                 <div className="row mt-5 section-testimonials saml-scroll" id="mo_external_contact_form">
                     <h3 className="h1 mo-saml-free-trial-head size form-title text-center">Get Full - Featured Trial</h3>
                     <div className="col-md-6 mt-5 demo">
@@ -54,14 +52,15 @@ export default function TrialForm() {
                     <div className="col-md-5 mt-5 mo-saml-free-trial-form">
                         <h3 className="h1 form-title text-center" style={{fontWeight:"400"}}>No Credit Card Required</h3>
                         <form action="" method="POST" className="mo-saml-contact-form" onSubmit={sendData} id="mo_external_contact_form">
-                            <label for="free-trial-email">Email <span className="text-danger">*</span></label>
-                            <input type="email" name="email" placeholder="Enter valid email" value={data.email}id="mo_external_contact_form_email" required="" onChange={valueHandler} />
-                            <label for="free-trial-text">Requirement <span className="text-danger">*</span></label>
-                            <textarea name="query" placeholder="Tell us about your requirement"  value={data.text}id="mo_external_contact_form_query" onChange={valueHandler} required="" ></textarea >
+                            <label htmlFor="free-trial-email">Email <span className="text-danger">*</span></label>
+                            <input type="email" name="email" placeholder="Enter valid email" id="mo_external_contact_form_email" required="" onChange={valueHandler} />
 
-                            <input hidden id="mo_external_contact_form_support" value="samlsupport@xecurify.com" />
+                            <label htmlFor="free-trial-text">Requirement <span className="text-danger">*</span></label>
+                            <textarea name="query" placeholder="Tell us about your requirement"  id="mo_external_contact_form_query" onChange={valueHandler} required="" ></textarea >
 
-                            <input hidden id="mo_external_contact_form_look" value="TRIAL REQUEST : WordPress SAML / WS-FED IDP" />
+                            <input hidden id="mo_external_contact_form_support" defaultValue="samlsupport@xecurify.com" />
+
+                            <input hidden id="mo_external_contact_form_look" defaultValue="TRIAL REQUEST : WordPress SAML / WS-FED IDP" />
 
                             <button className="trial-form-btn-saml mt-5">Submit</button>
                         </form>

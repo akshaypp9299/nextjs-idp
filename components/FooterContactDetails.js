@@ -6,7 +6,7 @@ const FooterContactDetails = () => {
     return (
         
         <div className="col-md-3">
-            <Image src='/Assets/miniOrange.png' width={200} height={50}/>
+            <Image src='/Assets/miniOrange.png' width={200} height={50} alt="miniOrangeLogo"/>
             <div className='d-flex mt-4'>
                 <div className='footer-contact__icon'>
                     <FontAwesomeIcon icon={faPhone} />
