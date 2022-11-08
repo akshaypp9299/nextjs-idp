@@ -942,3 +942,14 @@ textarea,input[type="email"]{
     flex-wrap:wrap ;
   }
 }
+.mo-success{
+  background-color: #d7ffd7;
+  position: fixed;
+  top:14rem;
+  left: 50%;
+  color:#2f4f4f;
+  transform: translate(-50%, -13%);
+  padding: 1rem;
+  border-radius: 5px;
+
+}
