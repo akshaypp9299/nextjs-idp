@@ -1,4 +1,5 @@
 import Image from "next/image";
+import bannerImage from "../public/Assets/banner.webp";
 import Link from "next/Link";
 
 const Banner = () => {
@@ -19,7 +20,7 @@ const Banner = () => {
                         <p className="banner-text-idp mt-4" id="banner-txt" >Contact us at <a href="mailto:samlsupport@xecurify.com"><u className="anchor-saml">samlsupport@xecurify.com</u></a> and we'll help you set up your Service Provider with WordPress SAML IDP in no time.</p>
                     </div>
                     <div className="col-md-5 mt-5 banner-image-container" >
-                        <Image src="/Assets/banner.webp" alt="Banner Logo" width={600} height={400} layout="fill" priority className="banner-image" />
+                        <Image src={bannerImage} alt="Banner Logo" layout="fill" priority className="banner-image" />
                     </div>
                 </div>
             </div>

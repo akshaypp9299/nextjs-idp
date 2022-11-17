@@ -428,7 +428,7 @@ a {
 }
 
 .anchor {
-  color: grey;
+  color: #313131;
   text-decoration: none !important;
 }
 
@@ -952,4 +952,8 @@ textarea,input[type="email"]{
   padding: 1rem;
   border-radius: 5px;
 
+}
+.logo-sec-desc-color{
+  font-weight: 400;
+  color:#000000;
 }

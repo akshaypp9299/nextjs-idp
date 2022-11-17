@@ -34,7 +34,7 @@ export default function CustomFooter() {
             <div className="custom-section-icon d-flex justify-content-center">
                 <FontAwesomeIcon icon={element.icon} size={"2x"} />
             </div>
-            <h5 className="custom-section-head text-center mt-2">{element.customHead}</h5>
+            <h6 className="custom-section-head text-center mt-2">{element.customHead}</h6>
             <p className="custom-section-desc text-center">{element.customDesc}</p>
             <div className="mt-2 d-flex justify-content-center">
                 {element.link}

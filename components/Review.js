@@ -1,9 +1,9 @@
-import UncontrolledExample from "./Carousel"
-import { faSolid, faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
 import SvgIcon from "./SvgIcon";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from "next/image";
+import User1 from "../public/Assets/review-user1.webp";
+import User2 from "../public/Assets/review-user2.webp";
+import User3 from "../public/Assets/review-user3.webp";
 
 function Review() {
   const openTab = (url) =>{
@@ -26,7 +26,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                  <Image src="/assets/review-user1.png" width={95} height={95} alt="user" />
+                  <Image src={User1} width={95} height={95} alt="user" />
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
                   <h3 className="review-heading ">Great plugin with even better support!</h3>
@@ -53,7 +53,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                  <Image src="/assets/review-user2.webp" width={95} height={95} alt="user"/> 
+                  <Image src={User2} width={95} height={95} alt="user"/> 
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
                   <h3 className="review-heading ">Great Product - Top tier support</h3>
@@ -80,7 +80,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                  <Image src="/assets/review-user3.webp" width={95} height={95} alt="user" />
+                  <Image src={User3} width={95} height={95} alt="user" />
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
                   <h3 className="review-heading ">Works well; Outstanding support</h3>
@@ -110,7 +110,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                <Image src="/assets/review-user1.png" width={95} height={95} alt="user" />
+                <Image src={User1} width={95} height={95} alt="user" />
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
                   <h3 className="review-heading ">Good Plugin Exceptional Support</h3>
@@ -137,7 +137,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                <Image src="/assets/review-user2.webp" width={95} height={95} alt="user" />
+                <Image src={User2} width={95} height={95} alt="user" />
 
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
@@ -165,7 +165,7 @@ function Review() {
             <div className="col-md-3 review-box">
               <div className="row p-2">
                 <div className="col-md-3" id="user-column">
-                <Image src="/assets/review-user3.webp" width={95} height={95} alt="user" />
+                <Image src={User3} width={95} height={95} alt="user" />
                 </div>
                 <div className="col-md-9 review-description" id="rev-desc">
                   <h3 className="review-heading ">Great Support Team – SSO Plug In Works as Advertised</h3>

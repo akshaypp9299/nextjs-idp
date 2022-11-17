@@ -1,4 +1,7 @@
 import Image from "next/image";
+import freshDeskIntegration from "../public/Assets/freshDeskIntegration.webp";
+import TalentLmsIntegration from "../public/Assets/talentlmss.webp"
+import Thinkific from "../public/Assets/thinkific.webp";
 
 export default function Integration() {
     return (
@@ -13,7 +16,8 @@ export default function Integration() {
                             <div className="ribbon ribbon-top-right"><span>new</span></div>
                             <div className="card__inner card__face--front">
                                 <div className=" col-md-4 text-center">
-                                    <img width="130px" height="80px" src="https://pluginsminiorangein.s3.amazonaws.com/wp-content/uploads/2022/10/freshdesk-logo.svg" className="idp-int-logo" alt="freshdesk" />
+                                    {/* <img width="130px" height="80px" src="https://pluginsminiorangein.s3.amazonaws.com/wp-content/uploads/2022/10/freshdesk-logo.svg" className="idp-int-logo" alt="freshdesk" /> */}
+                                    <Image src={freshDeskIntegration} height={80} width={80} className="idp-int-logo" alt="freshdesk" />
                                 </div>
                                 <div className="col-md-8">
                                     <h2>WordPress Freshdesk Integration</h2>
@@ -31,7 +35,8 @@ export default function Integration() {
                             <div className="ribbon ribbon-top-right"><span>new</span></div>
                             <div className="card__inner card__face--front">
                                 <div className=" col-md-4 text-center">
-                                    <img width="160px" height="80px" src="https://pluginsminiorangein.s3.amazonaws.com/wp-content/uploads/2022/10/talentlms.svg" className="idp-int-logo" alt="TalentLMS" />
+                                    {/* <img width="160px" height="80px" src="https://pluginsminiorangein.s3.amazonaws.com/wp-content/uploads/2022/10/talentlms.svg" className="idp-int-logo" alt="TalentLMS" /> */}
+                                    <Image src={TalentLmsIntegration} width={120} height={80} className="idp-int-logo" />
                                 </div>
                                 <div className="col-md-8">
                                     <h2>WordPress TalentLMS Integration</h2>
@@ -49,7 +54,8 @@ export default function Integration() {
                             <div className="ribbon ribbon-top-right"><span>new</span></div>
                             <div className="card__inner card__face--front">
                                 <div className=" col-md-4 text-center">
-                                    <img width="160px" height="60px" src="https://cdn.discordapp.com/attachments/945949843724075038/1036905983391309835/thinkific-vector-logo-removebg-preview.png" className="idp-int-logo" alt="Thinkific" />
+                                    {/* <img width="160px" height="60px" src="https://cdn.discordapp.com/attachments/945949843724075038/1036905983391309835/thinkific-vector-logo-removebg-preview.png" className="idp-int-logo" alt="Thinkific" /> */}
+                                    <Image src={Thinkific} width={160} height={60} className="idp-int-logo" alt="Thinkific"/>
                                 </div>
                                 <div className="col-md-8">
                                     <h2>WordPress Thinkific SSO</h2>

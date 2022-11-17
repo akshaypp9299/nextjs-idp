@@ -76,11 +76,11 @@ export default function TrialForm() {
                     <h3 className="h1 mo-saml-free-trial-head size form-title text-center">Get Full - Featured Trial</h3>
                     <div className="col-md-6 mt-5 demo">
                         <h3 className="h1 mo-saml-free-trial-head">10 Days Free Trial</h3>
-                        <h6 className="h4 form-font mt-4"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp;    Test the full featured plugin on your WordPress environment
-                        </h6>
-                        <h6 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp; Integrate with any platform of your choice</h6>
-                        <h6 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp;     Test all the premium features before purchasing the license</h6>
-                        <h6 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp; 24*7 support to help you with the setup</h6>
+                        <h5 className="h4 form-font mt-4"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp;    Test the full featured plugin on your WordPress environment
+                        </h5>
+                        <h5 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp; Integrate with any platform of your choice</h5>
+                        <h5 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp;     Test all the premium features before purchasing the license</h5>
+                        <h5 className="h4 form-font"><FontAwesomeIcon className='text-green' icon={faCheck} /> &nbsp; 24*7 support to help you with the setup</h5>
                     </div>
 
                     <div className="col-md-5 mt-5 mo-saml-free-trial-form">

@@ -1,5 +1,7 @@
-import { faCcVisa, faCcMastercard, faCcAmex,faPaypal,faBuil } from '@fortawesome/free-brands-svg-icons';
+import { faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PayPal from "../public/Assets/paypal.webp";
+import Build from "../public/Assets/Build.webp";
 import Image from 'next/image';
 
 export default function PaymentMethods() {
@@ -22,7 +24,7 @@ export default function PaymentMethods() {
                 <div className="col-lg-4 col-md-6 col-sm-12 col-md-4 mt-3">
                     <div className="plan-box">
                         <div className="plan-box-up">
-                            <img src="https://plugins.miniorange.com/wp-content/uploads/2022/08/paypal.webp" width="56px" height="56px" alt="paypal" />
+                            <Image src={PayPal} width={56} height={56} alt="paypal" />
                         </div>
                         <p>
                             Please contact us <a className='anchor' href="https://www.miniorange.com/contact" target="_blank"><b>here</b></a> or drop an email at <a className='anchor' href="mailto:samlsupport@xecurify.com"><b>samlsupport@xecurify.com</b></a> for more information<br /><br />
@@ -32,7 +34,7 @@ export default function PaymentMethods() {
                 <div className="col-lg-4 col-md-6 col-sm-12 col-md-4 mt-3">
                     <div className="plan-box">
                         <div className="plan-box-up d-flex justify-content-center align-items-baseline">
-                            <Image src="/Assets/Payment-methods.png" width={42} height={42} alt="bank transfer"/>
+                            <Image src={Build} width={42} height={42} alt="bank transfer"/>
                             <span className="h3" style={{fontFamily:"Auto"}}>&nbsp;&nbsp;Bank Transfer</span>
                         </div>
                         <p>

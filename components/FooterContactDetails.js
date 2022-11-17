@@ -42,7 +42,7 @@ const FooterContactDetails = () => {
             </div>
 
            <div className='mt-4'>
-            <a href='' className='btn btn-success'>Free Sign Up</a>
+            <a href="https://www.miniorange.com/businessfreetrial" className='btn btn-success'>Free Sign Up</a>
             </div>
         </div>
     )
